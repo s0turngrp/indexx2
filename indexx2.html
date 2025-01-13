@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poeminha</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #249000;
+            text-align: center;
+        }
+
+        .poem {
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: absolute;
+        }
+
+        .photo:hover {
+            transform: scale(1.1) rotate(0deg);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Fotos com ângulos diferentes */
+        .photo-1 {
+            top: 10%;
+            left: 10%;
+            transform: rotate(-10deg);
+        }
+
+        .photo-2 {
+            bottom: 20%;
+            right: 15%;
+            transform: rotate(15deg);
+        }
+
+        .photo-3 {
+            top: 50%;
+            left: 60%;
+            transform: rotate(-5deg);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button-container button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>um amor desesperado</h1>
+
+    <div class="poem">
+        <p>Não sei como isso começou,<br>
+           Mas já tô louco pra nem acabar<br>
+            Cada segundo descubro uma nova sensação<br>
+            Um reflexo de uma alma que só faz me amar.<br><br>
+            Mesmo na distância, sinto seu calor,<br>
+            Que essas frases te sirvam como abraço.<br>
+            Que meu carinho simbolize meu amor<br>
+            Já que o seu sempre tira meu coração do compasso.<br><br><br>
+            E quando enfim, quem sabe um dia me procure<br>
+            Quem sabe a morte, fim de quem vive, <br>
+            Quem sabe a solidão, fim de quem ama;<br>
+            "Talvez possa eu lhe dizer do amor (que tenho)<br>
+            Amor que sei que não será eterno, posto que é chama<br>
+            Mas que será infinito enquanto dure" 
+            </p>
+    </div>
+
+    <!-- Fotos no estilo mural -->
+    <img src="https://i.pinimg.com/736x/f8/30/15/f83015480a57bee5e25318a26253e2a3.jpg" alt="Foto 1" class="photo photo-1">
+    <img src="https://i.pinimg.com/736x/ef/04/ed/ef04ed8c3cf0d59bf16f23fd16fa5b64.jpg" alt="Foto 2" class="photo photo-2">
+    <img src="https://i.pinimg.com/736x/df/dd/ae/dfddae93addd99b9190742a09a33bbb5.jpg" alt="Foto 3" class="photo photo-3">
+
+    <div class="button-container">
+        <button onclick="redirectvideo()">👍</button>
+        <button onclick="redirectgif()">👎</button>
+    </div>
+
+    <script>
+        function redirectvideo() {
+            window.location.href = "https://www.youtube.com";
+        }
+
+        function redirectgif() {
+            window.location.href = "https://tenor.com/ujwZ.gif";
+        }
+    </script>
+</body>
+
+</html>

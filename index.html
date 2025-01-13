@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Presente Pra Você</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .panda {
+            width: 100px;
+            height: auto;
+            position: relative;
+            display: inline-block;
+            transform: rotate(calc(-10deg + 20deg));
+            transition: transform 0.5s ease;
+        }
+
+        .panda:hover {
+            transform: scale(1.2) rotate(0deg);
+        }
+
+        .photo-frame {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            margin: 20px auto;
+            border: 2px solid #fff;
+            overflow: hidden;
+        }
+
+        .photo-frame img {
+            position: absolute;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-frame img:hover {
+            transform: scale(1.2);
+        }
+
+        .question {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .button-container {
+            margin: 20px;
+            position: relative;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #yes-button {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        #no-button {
+            background-color: #dc3545;
+            color: #fff;
+            position: absolute;
+        }
+
+        .text-container {
+            display: none;
+            text-align: center;
+            margin: 20px;
+            color: #fff;
+        }
+
+        .text-container h1 {
+            font-size: 2rem;
+        }
+
+        .text-container p {
+            line-height: 0.8;
+            font-size: 1.3rem;
+        }
+
+        .text-container p a {
+            line-height: 0.7;
+        }
+
+        .text-container a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .text-container::selection,
+        .text-container *::selection,
+        h1::selection,
+        p::selection {
+            background: #241e00;
+            color: #fff;
+        }
+
+        #next-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Meu presente pra você (;-;)</h1>
+    <img src="https://i.pinimg.com/originals/2e/15/d8/2e15d85fa3d355dec4367194b965b061.jpg" alt="Mini panda"
+        class="panda">
+    <img src="https://images.vexels.com/media/users/3/147184/isolated/preview/66edab4aa06e29587c7aa39558b78a6e-desenho-de-girassol.png"
+        alt="Mini panda" class="panda">
+    <img src="https://i.pinimg.com/originals/a5/fe/c4/a5fec4284531e94c3103e325dd3696f6.gif" alt="Mini panda"
+        class="panda">
+    <div class="photo-frame">
+        <img src="https://i.pinimg.com/736x/95/be/02/95be022cbaec97f39945158657aa47cd.jpg" alt="Foto 1">
+        <img src="https://i.pinimg.com/736x/67/a0/fe/67a0fe74fbb31d814d5820fc5497aba0.jpg" alt="Foto 2">
+        <img src="https://i.pinimg.com/736x/3e/4b/af/3e4baf2af608e0705a1225ad67816919.jpg" alt="Foto 3">
+        <img src="https://i.pinimg.com/1200x/00/91/3d/00913d1d1dad3d2f8db63ad91c56df64.jpg" alt="Foto 4">
+        <img src="https://i.pinimg.com/736x/5f/8c/61/5f8c61c08b0e146a0b7acfa460551636.jpg" alt="Foto 5">
+    </div>
+    <div class="question">Podemos começar? (nn tem nem como não começar)</div>
+    <div class="button-container">
+        <button id="yes-button" onclick="start()">Sim</button>
+        <button id="no-button" onmouseover="runAway()">Não</button>
+    </div>
+    <div class="text-container">
+        <h1>Como eu penso em você?</h1>
+        <p> As vezes eu acho até <a href="https://www.youtube.com/watch?v=VMnu8UgTQkg" target="_blank">lamentável</a> a
+            saudade que eu sinto,
+        <p>na verdade, ninguém me faz sentir isso <a
+                href="https://www.youtube.com/watch?v=Jw1ih2kdFEU&pp=ygULbGlrZSB5b3UgZG8%3D" target="_blank">como você
+                faz</a>.
+        <p>No fim, acho que eu mesmo causo isso em mim, n sei lidar com esses <a
+                href="https://www.youtube.com/watch?v=ogSuFL1MlgY&pp=ygUYZmVlbHogbGlsIHBlZXAgbGVnZW5kYWRv"
+                target="_blank">sentimentos...</a> isso
+        <p>deve ser pira minha mesmo, sempre sou um <a href="https://www.youtube.com/watch?v=gSxIJn6hdTk"
+                target="_blank">nômade</a>, viajando nos
+        <p>meus próprios pensamentos se o assunto for você.. como tudo <a
+                href="https://www.youtube.com/watch?v=-QdZ2VtOkhc" target="_blank">fica</a> mais
+        <p>simples, e isso não é só na minha cabeça, meu coração parece até um show do <a
+                href="https://www.youtube.com/watch?v=rmdS1tI_6Ogc" target="_blank">alok</a> só
+        <p>de pensar nos seus olhos, e no que eu <a href="https://www.youtube.com/watch?v=UKnu_3i4NKo"
+                target="_blank">vislumbro de nós</a> quando me lembro de você
+        <p>no fim você realmente é um pequeno e belo <a href="https://www.youtube.com/watch?v=ek43jAzd3O4"
+                target="_blank">girassól</a>, me mostrando toda a luz que tem em você.
+        <p>A real é que tu me faz sentir um <a href="https://www.youtube.com/watch?v=KE7Do_JxDOY" target="_blank">amor
+                quântico</a>, quase que <a href="https://www.youtube.com/watch?v=NT_pupGoplk"
+                target="_blank">incendiário</a>,
+        <p>me faz pular como se eu tivesse dançando <a href="https://www.youtube.com/watch?v=4iKtTmnHojU">um samba em
+                Paris</a>, ou em <a href="https://www.youtube.com/watch?v=o3-lzz60iTQ">Lisboa</a>, lá em <a
+                href="https://www.youtube.com/watch?v=l4DAcyXkX0E">Portugal.</a>
+        <p>Ficar o dia todo falando besteira com você, te explicar todo um <a
+                href="https://www.youtube.com/watch?v=XjvcDoVG6cs">um universo de coisas</a> que se á eu nem conheço...
+            Só pra ver seu rostinho,
+        <p>dizer que, mesmo com a distância, sempre vou estar <a
+                href="https://www.youtube.com/watch?v=mhm3c_I7gkw&pp=ygUecmlnaHQgaGVyZSBsaWwgcGVlcCB0cmFkdcOnw6Nv">bem
+                aqui</a>... mesmo que em pensamento;
+        <p>E também, foda-se sabe? Eu andaria milhas só pra ser teu psicólogo... entraria até numa briga de faca se
+            duvidar.
+        <p>Quero só dormir, pra quando <a href="https://www.youtube.com/watch?v=N5TVWZfRfIs">amanhecer</a>, eu poder
+            dizer que o que meu sonho virou realidade, e que estou com você.
+        <p>Tudo, os <a href="https://www.youtube.com/watch?v=V141wUSkTfk">planos</a> mirabolantes que eu faço só pra te
+            fazer sorrir, ou como
+        <p>vou continuar te provando o que sinto por você. Não sei se faz sentido sabe, isso tudo é culpa desse <a
+                href="https://www.youtube.com/watch?v=OoKhQnCKyCY">melô</a> de emoções.
+        <p>Você tem se tornado alguém que não quero largar, perco meus medos e ganho outros ao mesmo tempo, acho
+            que faz parte
+        <p>Espero que tenha gostado... Se você n reparou, meio que tem palavras que te levam pra umas músicas que me
+            fazem lembrar você,
+        <p>pq minha caretice me obriga a fazer isso kkkk...
+        <p>Feliz aniversário, minha princesa... obrigado por tudo. :)</p>
+        <button id="next-button" onclick="nextPart()">poeminha</button>
+    </div>
+
+    <script>
+        function start() {
+            document.querySelector('.text-container').style.display = 'block';
+            document.querySelector('.question').style.display = 'none';
+            document.querySelector('.button-container').style.display = 'none';
+            document.querySelector('.photo-frame').style.display = 'none';
+            document.getElementById('next-button').style.display = 'inline-block';
+        }
+
+        function runAway() {
+            const noButton = document.getElementById('no-button');
+            const x = Math.random() * 90;
+            const y = Math.random() * 90;
+            noButton.style.left = `${x}%`;
+            noButton.style.top = `${y}%`;
+        }
+
+        function randomPositionNoOverlap(imgs, frameWidth, frameHeight) {
+            const positions = [];
+            imgs.forEach(img => {
+                let validPosition = false;
+                let x, y;
+                while (!validPosition) {
+                    x = Math.random() * (frameWidth - 180);
+                    y = Math.random() * (frameHeight - 180);
+                    validPosition = positions.every(pos => {
+                        const dx = pos.x - x;
+                        const dy = pos.y - y;
+                        return Math.sqrt(dx * dx + dy * dy) > 180;
+                    });
+                }
+                positions.push({ x, y });
+                img.style.left = `${x}px`;
+                img.style.top = `${y}px`;
+            });
+        }
+
+        const photoFrame = document.querySelector('.photo-frame');
+        const imgs = document.querySelectorAll('.photo-frame img');
+        randomPositionNoOverlap(imgs, photoFrame.offsetWidth, photoFrame.offsetHeight);
+
+        function nextPart() {
+            window.location.href = "indexx2.html"; 
+        }
+    </script>
+
+</body>
+
+</html>
